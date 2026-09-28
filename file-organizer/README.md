@@ -1,16 +1,17 @@
-# File Organizer Using Packages and Modules
+# File Organizer
 
-Python project that organizes files by extension into category folders.
+A Python utility that organizes files into category folders based on their extensions.
 
-## Planned structure
+## GitHub
 
-- `file_organizer/` — Python package for the application modules
-- `main.py` — application entry point
-- `logs/` — operation logs
-- `tests/` — test files
+[View this project on GitHub](https://github.com/Hrishabh-Tomar/Python-Projects/tree/main/file-organizer)
 
-## Requirements
+## Usage
 
-- File detection, movement, logging, and exception-handling modules
-- Custom `UnsupportedFileError` exception
-- Handling for missing files, missing destinations, duplicate names, permission errors, and unsupported file types
+Run from the parent directory:
+
+```powershell
+python -m File_Organizer "C:\path\to\folder"
+```
+
+Supported files are moved into folders such as `Images`, `Documents`, `Text`, `Data`, `Audio`, and `Video`.
