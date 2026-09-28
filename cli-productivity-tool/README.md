@@ -1,19 +1,30 @@
-# CLI Productivity Tool
+# CLI Expense Tracker
 
-A command-line productivity application built through step-by-step vibe coding.
+A command-line tool for recording expenses, listing them, and displaying totals by category. Invalid input is handled with custom exceptions and application activity is logged.
 
-## Planned structure
+## Usage
 
-- `productivity_tool/` — Python package
-- `main.py` — CLI entry point
-- `logs/` — application logs
-- `tests/` — test files
+Run from this directory:
 
-## Requirements
+```powershell
+python main.py add 45.50 food "Weekly groceries"
+python main.py list
+python main.py summary
+```
 
-- At least four Python modules
-- A package with imports between modules
-- `try/except/finally`
-- At least one custom exception
-- Logging to a file
-- README documentation containing at least five AI prompts used during development
+Run the tests:
+
+```powershell
+python -m unittest test_expense_tracker.py -v
+```
+
+Supported categories include `food`, `transport`, `bills`, `shopping`, `health`, `entertainment`, and `other`.
+
+## Project Structure
+
+- `main.py` - command-line interface
+- `tracker.py` - expense management operations
+- `models.py` - expense validation and data model
+- `storage.py` - JSON persistence
+- `exceptions.py` - custom application errors
+- `logger_config.py` - file and console logging
