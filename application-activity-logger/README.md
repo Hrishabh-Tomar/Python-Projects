@@ -1,18 +1,27 @@
 # Application Activity Logger
 
-Menu-driven Python application with login, calculation, file reading, file writing, and logout activities.
+A menu-driven Python application with login, calculation, file reading, file writing, and logout activities. Each action is logged and handled without terminating the application on expected errors.
 
-## Planned structure
+## Usage
 
-- `activity_logger/` — Python package for application modules
-- `main.py` — application entry point
-- `logs/application.log` — DEBUG, INFO, WARNING, ERROR, and CRITICAL logs
-- `logs/error.log` — error-focused logs
-- `tests/` — test files
+Run from this directory:
 
-## Requirements
+```powershell
+python main.py
+```
 
-- Separate modules instead of placing all logic in `main.py`
-- Continue running when an operation fails
-- Generate all required logging levels
-- Store logs in the `logs/` directory
+Demo login credentials:
+
+- Username: `admin`
+- Password: `admin123`
+
+The menu supports login, arithmetic calculations, reading and writing text files, logout, and clean exit. Logs are written to the `logs` directory.
+
+## Project Structure
+
+- `main.py` - interactive application entry point
+- `auth.py` - login session management
+- `calculator.py` - arithmetic operations
+- `file_ops.py` - text file operations
+- `exceptions.py` - application-specific errors
+- `logger_config.py` - console and file logging setup
