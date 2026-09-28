@@ -1,16 +1,19 @@
 # Fault-Tolerant Student Result Processor
 
-Python project that processes student marks for five subjects and calculates totals, percentages, grades, and pass/fail status.
+Processes student marks for five subjects and calculates totals, percentages, grades, and pass/fail status. Invalid records are logged while valid records continue processing.
 
-## Planned structure
+## Usage
 
-- `student_result_processor/` — Python package for student and result modules
-- `main.py` — application entry point
-- `logs/` — processing and error logs
-- `tests/` — test files
+Run from this directory:
 
-## Requirements
+```powershell
+python main.py
+```
 
-- Separate student operations, result calculation, exception definitions, and logging modules
-- Custom `InvalidMarksError` exception
-- Continue processing students after invalid input or calculation errors
+## Project Structure
+
+- `main.py` - application entry point and batch processing
+- `student.py` - student data validation
+- `result_calculator.py` - totals, percentages, grades, and status
+- `exceptions.py` - custom validation and calculation errors
+- `logger_config.py` - console and file logging
